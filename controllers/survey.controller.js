@@ -1,7 +1,8 @@
 const array = []
 let count = 0
+const surveyarray = array
 
-const surveyController = (req, res) => {
+const surveyControllerPost = (req, res) => {
 	count++
 	let json = { index: count,  json: req.body } ;
 	// console.dir(req.body)
@@ -10,4 +11,9 @@ const surveyController = (req, res) => {
 	res.json( array );
 };
 
-module.exports = {surveyController};
+const surveyControllerGet = (req, res) => {
+	console.log(surveyarray)
+	res.json( surveyarray );
+};
+
+module.exports = {surveyControllerPost,surveyControllerGet};

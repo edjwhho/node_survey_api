@@ -4,7 +4,6 @@ const port = 8000;
 const survey = require('./routes/survey.route')
 
 app.use(express.json());
-
 app.use('/',survey)
 
 app.listen(port, () => {
